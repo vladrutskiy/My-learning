@@ -338,3 +338,16 @@ var a=4, b=4;
 console.log(a<<b);
 console.log(a>>b);
 console.log(a**b);*/
+
+
+
+
+// JS intermediate
+//JavaScript Objects
+
+var person = {
+  name: "Vlad", age: 31, 
+  favColor: "green", height: 183
+ };
+ console.log(`Hello ${person.name} your fav color is ${person.favColor}`);
+ document.write(`Hello ${person.name} your fav color is ${person.favColor}`);
