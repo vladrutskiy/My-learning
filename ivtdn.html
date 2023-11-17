@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVTDN learning diary</title>
+    <style>
+        div {
+            background-color: rgb(164, 239, 239);
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        Hello, it's a new course for me.
+    </div>
+    <div id="myDiv1">
+        We'll see how good it is.
+    </div >
+<script src="ivtdn.js"></script>
+
+<script>
+    let my = document.querySelector("#myDiv");
+my.addEventListener("click", function(){
+    my.innerHTML = "have a good day";   
+})
+</script>
+
+<script>
+    let me = document.querySelector("#myDiv1");
+my.addEventListener("click", function(){
+    me.innerHTML = "big boss";   
+})
+</script>
+</body>
+</html>
