@@ -345,9 +345,39 @@ console.log(a**b);*/
 // JS intermediate
 //JavaScript Objects
 
-var person = {
-  name: "Vlad", age: 31, 
-  favColor: "green", height: 183
- };
- console.log(`Hello ${person.name} your fav color is ${person.favColor}`);
- document.write(`Hello ${person.name} your fav color is ${person.favColor}`);
+// var person = {
+//   name: "Vlad", age: 31, 
+//   favColor: "green", height: 183
+//  };
+//  console.log(`Hello ${person.name} your fav color is ${person.favColor}`);
+//  document.write(`Hello ${person.name} your fav color is ${person.favColor}`);
+
+
+
+// function person (name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+// var John = new person("John", 25);
+// var James = new person("James", 21);
+
+// document.write(John.age);
+
+
+/*
+function person(name, age, color) {
+  this.name = name;
+  this.age = age;
+  this.favColor = color;
+}
+
+var p1 = new person("John", 42, "green");
+var p2 = new person("Amy", 21, "red");
+
+document.write(p1.age); 
+document.write(p2.name);
+
+*/
+
+
+
