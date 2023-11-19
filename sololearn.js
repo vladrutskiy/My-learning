@@ -381,3 +381,13 @@ document.write(p2.name);
 
 
 
+var John = {
+  name: "John",
+  age: 25
+};
+var James = {
+  name: "James",
+  age: 21
+};
+
+document.write(John.age + John.name);
