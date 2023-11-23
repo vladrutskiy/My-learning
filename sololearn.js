@@ -379,7 +379,7 @@ document.write(p2.name);
 
 */
 
-
+/*
 
 var John = {
   name: "John",
@@ -391,3 +391,17 @@ var James = {
 };
 
 document.write(John.age + John.name);
+*/
+
+
+let x = +prompt("Enter a number more than 10");
+while (true){ 
+
+if (x > 10){
+break;
+}
+else if (isNaN(x)){
+continue;
+}
+}
+alert(x + " more than 10");
