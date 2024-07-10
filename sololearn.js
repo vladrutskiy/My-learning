@@ -394,7 +394,7 @@ document.write(John.age + John.name);
 */
 
 
-let x = +prompt("Enter a number more than 10");
+/*let x = +prompt("Enter a number more than 10");
 while (true){ 
 
 if (x > 10){
@@ -405,3 +405,4 @@ continue;
 }
 }
 alert(x + " more than 10");
+*/
