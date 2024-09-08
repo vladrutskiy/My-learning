@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vlad Rutskyi personal website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./my_w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./my_w3.js"></script>
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Lato", sans-serif;
+            }
+
+            body,
+            html {
+                height: 100%;
+                color: #56504f;
+                line-height: 1.8;
+            }
+
+            /* Create a Parallax Effect */
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* First image (Logo. Full height) */
+            .bgimg-1 {
+                background-image: url('https://rutskyi.yotako.com/wp-content/uploads/2024/08/calgary-mountain-skyline.jpg');
+                min-height: 100%;
+            }
+
+            /* Second image (Certificates) */
+            .bgimg-2 {
+                background-image: url("https://rutskyi.yotako.com/wp-content/uploads/2024/08/calgary-simpleimage.jpg");
+                min-height: 60%;
+            }
+
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("https://rutskyi.yotako.com/wp-content/uploads/2024/08/Downtown_Calgary_2020-3.jpg");
+                min-height: 60%;
+            }
+
+            .w3-wide {
+                letter-spacing: 10px;
+            }
+
+            .w3-hover-opacity {
+                cursor: pointer;
+            }
+
+            /* Turn off parallax scrolling for tablets and phones */
+            @media only screen and (max-device-width: 1600px) {
+
+                .bgimg-1,
+                .bgimg-2,
+                .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+            }
+            
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="#certificates" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> CERTIFICATES</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a> -->
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#certificates" class="w3-bar-item w3-button" onclick="toggleFunction()">CERTIFICATES</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="cutoutTextMain">Vlad Rutskyi</div>  
+        
+    </div>
+    
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p class="w3-center"><em>I'm passionate about ensuring the quality and excellence of digital products.</em></p>
+        <p> I'm a results-driven QA Engineer you can count on. 
+            I have a proven track record of 7+ years in ensuring the quality and excellence of digital products.
+
+            </br> I specialize in providing thorough regression testing, creating effective test cases, and optimizing
+             testing processes for maximum efficiency.
+           
+           Dedicated to a keen eye for detail, I have successfully contributed to the seamless delivery
+            of high-quality software, finding critical and edge-case issues. Committed to continuous improvement,
+             I stay abreast of industry trends and emerging technologies.</p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>Vald Rutskyi</b></p><br>
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/123.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
+                    width="500" height="333">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p> </p>
+            </br>
+        
+                <p>Welcome to my website. 
+                </br>I'm attentive, analytical, and flexible Software QA Engineer. 
+                Dedicated to the excellence of digital products and managing complex projects.
+            </br> 
+                 Professional and accurate in developing test strategies, and regression testing. 
+                  Able to work with minimum supervision. I possess close attention to detail and analytical thinking, 
+                 contributing to the continuous improvement of the delivery of high-quality software.
+        </br> I have hands-on experience with large SaaS, augmented reality, banking, and other projects.
+        Feel free to contact me, , to discuss how my expertise and experience can elevate your team’s product quality.
+                 </p>
+            </div>
+        </div>
+        <!-- <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+        <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+        </div> -->
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">7+</span><br>
+            Years of experience
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">7+</span><br>
+            Projects Done
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">20+</span><br>
+            Certificates gained
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">∞</span><br>
+            Happy clients
+        </div>
+    </div>
+
+    <!-- Second Parallax Image with Certificates Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="cutoutTextSecondary">Certificates</div>
+        <!-- <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CERTIFICATES</span> 
+            
+        </div> -->
+    </div>
+
+    <!-- Container (Certificates Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="certificates">
+        <h3 class="w3-center">MY CERTIFICATES</h3>
+        <p class="w3-center"><em>Here are some of my certificates.<br> <!-- Click on the images to make
+                them bigger</em></p><br>  -->
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/information-security-fundamentals.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Information Security Fundamentals">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/agile-and-scrum.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Professional Diploma in Agile and Scrum">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/cyberSecurity.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="CyberSecurity Bootcamp">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_PlayWright_23_07_24.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Introduction to Playwright">
+            </div>
+        </div>
+        <span id="dots">...</span>
+        <span id="more">
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_Postman_06_24.png" 
+                style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Introduction to Postman API">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_Postman_06_24.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Introduction to JavaScript">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Setting_Foundation_for_Automation_13_11_23.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Setting a Foundation for Successful Test Automation">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_JS_08_11_23.png" style="width:100%" onclick="onClick(this)" 
+                class="w3-hover-opacity" alt="Introduction to JavaScript">
+            </div>
+
+        
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_Auto_Testing_10_23.png" style="width:100%" 
+                onclick="onClick(this)" class="w3-hover-opacity" alt="Introduction to Automation Testing">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/GitHub_10_23.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="GitHub Tutorial for Beginners">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/CSS_27_04_2020.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="CSS Course">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/HTML_28_07_2016.png" style="width:100%" onclick="onClick(this)" 
+                class="w3-hover-opacity" alt="HTML course">
+            </div>
+
+            
+           
+        </div>
+        
+
+     <div class="w3-row-padding w3-center w3-section">
+
+        <div class="w3-col m3">
+            <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/SQL_20_07_16.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                alt="This certificate demonstrates theoretical understanding of SQL">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Hillel_2016.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                alt="QA graduation certificate">
+        </div>
+
+        <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/rock-profile.png" style="width:100%" onclick="onClick(this)" 
+                class="w3-hover-opacity" alt="Rock Your LinkedIn Profile">
+            </div>
+
+        <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/finding-job.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Finding a Job on LinkedIn">
+            </div>
+
+            <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
+            <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="loadMoreButton()" id="myBtn1">Load More</button> -->
+        
+        </div>
+    </span>
+    <button onclick="myFunction1()" id="myBtn1">Read more</button>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <!-- Third Parallax Image with Certificates Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="cutoutTextSecondary">Contact</div>
+        <!-- <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div> -->
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">WHERE I WORK</h3>
+        <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00
+                    151515<br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+                    mail@mail.com<br>
+                </div>
+                <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or contact me</p>
+                <!-- contact form -->
+                <!-- 
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+    <a class="w3-button w3-round-xxlarge w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+    <!-- Footer end. -->
+    </footer>
+
+ 
+</body>
+
+</html>
