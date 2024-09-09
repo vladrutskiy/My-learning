@@ -29,17 +29,17 @@ function toggleFunction() {
 
 //load more button functionality
 function myFunction1() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
+    var dots = document.getElementById("dots1");
+    var moreText = document.getElementById("more1");
     var btnText = document.getElementById("myBtn1");
-  
+
     if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more"; 
-      moreText.style.display = "none";
+        dots.style.display = "inline";
+        btnText.innerHTML = "Load more";
+        moreText.style.display = "none";
     } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less"; 
-      moreText.style.display = "inline";
+        dots.style.display = "none";
+        btnText.innerHTML = "Load less";
+        moreText.style.display = "inline";
     }
-  }
+}
