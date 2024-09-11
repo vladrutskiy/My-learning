@@ -75,3 +75,19 @@ function seeFunction() {
         moreText.style.display = "inline";  // Show additional content
     }
 }
+
+function abbeydaleFunction() {
+    var dots = document.getElementById("dots4");
+    var moreText = document.getElementById("more4");
+    var btnText = document.getElementById("myBtn4");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";  // Show dots if content is collapsed
+        btnText.innerHTML = "Load more";  // Change button text
+        moreText.style.display = "none";  // Hide additional content
+    } else {
+        dots.style.display = "none";  // Hide dots if content is expanded
+        btnText.innerHTML = "Load less";  // Change button text
+        moreText.style.display = "inline";  // Show additional content
+    }
+}
