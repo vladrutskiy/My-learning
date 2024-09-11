@@ -370,7 +370,8 @@ a {
   background-color: inherit;
   text-align: center;
   cursor: pointer;
-  white-space: nowrap
+  white-space: nowrap;
+  position: static;
 }
 
 .w3-btn:hover {
