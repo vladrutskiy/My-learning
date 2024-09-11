@@ -1368,6 +1368,11 @@ a {
   text-align: center !important
 }
 
+.w3-border-radius-20{
+  border-radius: 20px;
+    border: 1px;
+}
+
 .w3-border-0 {
   border: 0 !important
 }

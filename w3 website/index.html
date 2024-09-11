@@ -89,8 +89,8 @@
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+        <div class="w3-bar " id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right "
                 href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
@@ -116,13 +116,16 @@
 
     <!-- First Parallax Image with Logo Text -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-        <div class="cutoutTextMain">Vlad Rutskyi</div>  
+        <div class="cutoutTextMain w3-round-large">Vlad Rutskyi</div>  
         
     </div>
-    
+
+    <div>
+         <br> 
+        </div>
 
     <!-- Container (About Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-content w3-container w3-padding-64 w3-border w3-border-radius-20" id="about">
         <h3 class="w3-center">ABOUT ME</h3>
         <p class="w3-center"><em>I'm passionate about ensuring the quality and excellence of digital products.</em></p>
         <p> I'm a results-driven QA Engineer you can count on. 
@@ -136,7 +139,7 @@
              I stay abreast of industry trends and emerging technologies.</p>
         <div class="w3-row">
             <div class="w3-col m6 w3-center w3-padding-large">
-                <p><b><i class="fa w3-margin-right"></i>Vald Rutskyi</b></p><br>
+                <h4><b><i class="fa w3-margin-right"></i>Vald Rutskyi</b></h4><br>
                 <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/123.jpg" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
                     width="500" height="333">
             </div>
@@ -174,6 +177,11 @@
         </div> -->
     </div>
 
+    <div>
+        <br> 
+       </div>
+
+
     <!-- Row with numbers -->
     <div class="w3-row w3-center w3-dark-grey w3-padding-16">
         <div class="w3-quarter w3-section">
@@ -196,16 +204,16 @@
 
     <!-- Second Parallax Image with Certificates Text -->
     <div class="bgimg-2 w3-display-container w3-opacity-min">
-        <div class="cutoutTextSecondary">Projects</div>
+        <div class="cutoutTextSecondary w3-round-large">Projects</div>
         <!-- <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">CERTIFICATES</span> 
             
         </div> -->
     </div>
 
-     <!-- Container (About Section) -->
-     <div class="w3-content w3-container w3-padding-64" id="projects">
-        <h3 class="w3-center">PROJECTS **UNDER CONSTRUCTION**</h3> <!-- Don't forget to remove the UNDER CONSTRUCTION -->
+     <!-- Container (Projects section) -->
+     <div class="w3-content " id="projects">
+        <h3 class="w3-center ">PROJECTS **UNDER CONSTRUCTION**</h3> <!-- Don't forget to remove the UNDER CONSTRUCTION -->
         <p class="w3-center"><em>Several words about projects I worked on.</em></p>
         <!-- <p> I'm a results-driven QA Engineer you can count on. 
             I have a proven track record of 7+ years in ensuring the quality and excellence of digital products.
@@ -218,7 +226,7 @@
              I stay abreast of industry trends and emerging technologies.</p> -->
 
              <!-- Upward Aviation Services block approx lines 220 - 254-->
-        <div class="w3-row">
+        <div class="w3-row w3-border w3-border-radius-20">
             <div class="w3-col m6 w3-center w3-padding-large">
                 <h4><b><i class="w3-margin-right " style="font-size: 12px;"></i> <a href="https://upwardaviation.ca/" >Upward Aviation Services</a> </b></h4>
                 <p><i class="fa w3-margin-right"></i>Aug 2024 -  Present </p><br>
@@ -237,24 +245,27 @@
                 <span id="dots2">...</span> 
                 <span id="more2" style="display: none;">
                     <ul>
-                        <li>I masteredmy knowledge about WordPress, building websites, launching them, and maintaining them on this platform.</li>
-                        <li>In addition, I learned how to work with different plugins, and how to avoid some WordPress website-building mistakes.</li>
-                        <li>Added reCaptcha spam protection.</li>
-                        <li>Added CloudFlare protection.</li>
+                        <li> I mastered my knowledge about WordPress, building websites, launching them, and maintaining them on this platform.</li>
+                        <li> In addition, I learned how to work with different plugins, and how to avoid some WordPress website-building mistakes.</li>
+                        <li> Added reCaptcha spam protection.</li>
+                        <li> Added CloudFlare protection.</li>
                     </ul>
                 </span>
             </div>
+            
         
             <!-- Load More Button  -->
-                <br>
-                <br>
-                <br>
-            <button class="w3-button w3-padding-large w3-light-grey " style="position: initial;" onclick="upwardFunction()" id="myBtn2">Load more</button>
+                
+            <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="position: inherit; left: 40%; bottom: 10%;" onclick="upwardFunction()" id="myBtn2">Load more</button>
                 
         </div>
+        <div>
+                <br>
+                              
+            </div>
 
          <!-- SeeHearAct project lines 254 - 315 -->
-        <div class="w3-row"></div>
+        <div class="w3-row w3-border w3-border-radius-20">
             <div class="w3-col m6 w3-right w3-padding-large">
                 <h4><b><i class="fa w3-margin-right"></i><a href="https://seehearact.org/">See.Hear.Act</a> </b></h4>
                 <p><i class="fa w3-margin-right"></i>Aug 2024 -  Oct 2024 </p><br>
@@ -273,21 +284,29 @@
                 <span id="dots3">...</span> 
                 <span id="more3" style="display: none;">
                     <ul>
-                        <li>I learned much about WordPress, building websites, launching them, and maintaining them on this platform.</li>
-                        <li>Additionally, I learned about plugins and how to install and configure them.</li>
-                        <li>Added reCaptcha spam protection.</li>
-                        <li>Set up Consent Preferences.</li>
+                        <li> I learned much about WordPress, building websites, launching them, and maintaining them on this platform.</li>
+                        <li> Additionally, I learned about plugins and how to install and configure them.</li>
+                        <li> Added reCaptcha spam protection.</li>
+                        <li> Set up Consent Preferences.</li>
+                        <li> Practiced my PhotoShop knowledge.</li>
                     </ul>
                 </span>
             </div>
         
+        
             <!-- Load More Button  -->
                 
-            <button class="w3-button w3-padding-large w3-light-grey " onclick="seeFunction()" id="myBtn3">Load more</button>
+            <button class="w3-button w3-padding-large w3-light-grey w3-round-large" onclick="seeFunction()" id="myBtn3">Load more</button>
+        </div>
+
+            <div>
+                <br>
+                              
+            </div>
       
 
             <!-- Abbeydale Christian Fellowship project lines 289- 323-->
-            <div class="w3-row">
+            <div class="w3-row w3-border w3-border-radius-20">
                 <div class="w3-col m6 w3-center w3-padding-large">
                     <h4><b><i class="w3-margin-right " style="font-size: 12px;"></i> <a href="https://abbeydale.org" >Abbeydale Christian Fellowship</a> </b></h4>
                     <p><i class="fa w3-margin-right"></i>May 2024 -  Present </p><br>
@@ -298,18 +317,18 @@
                 <!-- To Hide this text on small devices change "w2-hide-small" to "w3-hide-small"  -->
                 <div class="w3-col m6 w2-hide-small w3-padding-large">
                     <p> This project started with volunteer website testing for Abbeydale Christian Fellowship church..
-                    <br> But we ended up with almost the whole rebranding process. Upward Aviation Services is a Calgary-based company that provides different aircraft-related services, from training to import assistance.
-                    <br> At first, we created a website. The next step was creating a logo, which was warmly accepted by the company owners. After that, we created mockups for printing the company logo on clothes. The project is ongoing.
-                    <br> This project is developed with the assistance of <a href="https://www.behance.net/natalia-lozovska"> Natalia Lozovska</a>.</p>
+                    <br> I found several critical security issues and contacted the website owner, providing ways and solutions to eliminate them.
+                    <br> This project encouraged me to create a quick Playwright automation test suit to find such issues on any WordPress-hosted website.
+                    <br> Also, we have an agreement to renew the Abbeydale Christian Fellowship church website. It will be redesigned from scratch by <a href="https://www.behance.net/natalia-lozovska"> Natalia Lozovska</a>.</p>
                 
                     <!-- Dots for collapsed content and hidden content span -->
                     <span id="dots4">...</span> 
                     <span id="more4" style="display: none;">
                         <ul>
-                            <li>I masteredmy knowledge about WordPress, building websites, launching them, and maintaining them on this platform.</li>
-                            <li>In addition, I learned how to work with different plugins, and how to avoid some WordPress website-building mistakes.</li>
-                            <li>Added reCaptcha spam protection.</li>
-                            <li>Added CloudFlare protection.</li>
+                            <li> I learned a lot about vulnerabilities in old versions of WordPress-hosted websites.</li>
+                            <li> I learned how to fix those issues.</li>
+                            <li> I started my journey in learning Playwright and created a small automated set of tests.</li>
+                            <li> Practiced my API testing knowledge.</li>
                         </ul>
                     </span>
                 </div>
@@ -318,12 +337,16 @@
                     <br>
                     <br>
                     <br>
-                <button class="w3-button w3-padding-large w3-light-grey " style="position: initial;" onclick="abbeydaleFunction()" id="myBtn4">Load more</button>
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="position: initial;" onclick="abbeydaleFunction()" id="myBtn4">Load more</button>
                     
             </div>
 
 
         </div> 
+        <div>
+            <br>
+                          
+        </div>
 
 
         <!-- These are some progress bars may be I'll use them later -->
@@ -350,16 +373,19 @@
 
     <!-- Third Parallax Image with Certificates Text -->
     <div class="bgimg-3 w3-display-container w3-opacity-min">
-        <div class="cutoutTextSecondary">Certificates</div>
+        <div class="cutoutTextSecondary w3-round-large">Certificates</div>
         <!-- <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">CERTIFICATES</span> 
             
         </div> -->
     </div>
 
-   
+    <div>
+        <br>
+    </div>
+
        <!-- Container (Certificates Section) -->
-<div class="w3-content w3-container w3-padding-64" id="certificates">
+<div class="w3-content w3-container w3-padding-64 w3-border w3-border-radius-20" id="certificates">
     <h3 class="w3-center">MY CERTIFICATES</h3>
     <p class="w3-center"><em>Here are some of my certificates.<br></em></p><br>
 
@@ -450,7 +476,10 @@
         </div>
     </span>
 
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px" onclick="myFunction1()" id="myBtn1">Load more</button>
+    <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="margin-top:64px" onclick="myFunction1()" id="myBtn1">Load more</button>
+</div>
+<div>
+    <br>
 </div>
 
     <!-- Modal for full size images on click-->
@@ -465,7 +494,7 @@
 
     <!-- Forth Parallax Image with Certificates Text -->
     <div class="bgimg-4 w3-display-container w3-opacity-min">
-        <div class="cutoutTextSecondary">Contact</div>
+        <div class="cutoutTextSecondary w3-round-large">Contact</div>
         <!-- <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
         </div> -->
@@ -506,12 +535,15 @@
                     </button>
                 </form> -->
             </div>
+            
         </div>
+
     </div>
+    
 
     <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <a href="#home" class="w3-button w3-light-grey w3-round-large"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
             <i class="fa fa-facebook-official w3-hover-opacity"></i>
             <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -520,7 +552,7 @@
             <i class="fa fa-twitter w3-hover-opacity"></i>
             <i class="fa fa-linkedin w3-hover-opacity"></i>
     <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-    <a class="w3-button w3-round-xxlarge w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+    <a class="w3-button w3-round-large w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
     <!-- Footer end. -->
     </footer>
 
