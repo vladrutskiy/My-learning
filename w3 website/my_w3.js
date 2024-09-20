@@ -123,3 +123,19 @@ function reflektFunction() {
         moreText.style.display = "inline";  // Show additional content
     }
 }
+
+function projectsFunction() {
+    var dots = document.getElementById("dots7");
+    var moreText = document.getElementById("more7");
+    var btnText = document.getElementById("myBtn7");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";  // Show dots if content is collapsed
+        btnText.innerHTML = "Load more";  // Change button text
+        moreText.style.display = "none";  // Hide additional content
+    } else {
+        dots.style.display = "none";  // Hide dots if content is expanded
+        btnText.innerHTML = "Load less";  // Change button text
+        moreText.style.display = "inline";  // Show additional content
+    }
+}
