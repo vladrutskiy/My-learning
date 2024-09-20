@@ -139,3 +139,27 @@ function projectsFunction() {
         moreText.style.display = "inline";  // Show additional content
     }
 }
+
+
+function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      typing = setTimeout(typeWriter, speed); // Save the timeout to be cleared later
+    }
+  }
+  
+  function startErasing() {
+    clearTimeout(typing);  // Stop typing if it hasn't finished
+    eraseTimeout = setTimeout(eraseText, eraseDelay);  // Wait before erasing
+  }
+  
+  function eraseText() {
+    var demoText = document.getElementById("demo").innerHTML;
+    if (demoText.length > 0) {
+      document.getElementById("demo").innerHTML = demoText.substring(0, demoText.length - 1);  // Erase one character at a time
+      setTimeout(eraseText, eraseSpeed);  // Continue erasing at the given speed
+    } else {
+      i = 0;  // Reset the index when everything is erased
+    }
+  }
