@@ -107,3 +107,19 @@ function portsideFunction() {
         moreText.style.display = "inline";  // Show additional content
     }
 }
+
+function reflektFunction() {
+    var dots = document.getElementById("dots6");
+    var moreText = document.getElementById("more6");
+    var btnText = document.getElementById("myBtn6");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";  // Show dots if content is collapsed
+        btnText.innerHTML = "Load more";  // Change button text
+        moreText.style.display = "none";  // Hide additional content
+    } else {
+        dots.style.display = "none";  // Hide dots if content is expanded
+        btnText.innerHTML = "Load less";  // Change button text
+        moreText.style.display = "inline";  // Show additional content
+    }
+}
