@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="./my_w3.js"></script>
-        <style>
+               <style>
             body,
             h1,
             h2,
@@ -493,6 +493,8 @@
 <div class="w3-content w3-container w3-border w3-border-radius-20" id="certificates">
     <h3 class="w3-center">MY CERTIFICATES</h3>
     <p class="w3-center"><em>Here are some of my certificates.<br></em></p><br>
+    
+
 
     <div class="w3-row-padding w3-center">
         <div class="w3-col m3">
@@ -609,13 +611,14 @@
             <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
         </div> -->
     </div>
-
+    
     <!-- Container (Contact Section) -->
      <div  >  
         <br>
     <div class="w3-content w3-container w3-border w3-border-radius-20" id="contact" onmouseover="typeWriter()" onmouseout="startErasing()">
         <h3 class="w3-center">WHERE YOU CAN FIND ME</h3>
         <p class="w3-center"><em>I'd love to chat!</em></p>
+        
 
         <div class="w3-row w3-padding-32 w3-section">
             <div class="w3-col m4 w3-container" >
@@ -627,20 +630,36 @@
                     <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1(403)-629-3752<br>
                     <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
                     v.rutskiy@icloud.com<br>
-                    
                     <script>
                         var i = 0;
                         
-                        var txt = 'Swing by for a cup of coffe, or contact me.';
+                        var txt = 'swing by for a cup of coffe, or contact me.';
                         var speed = 50; 
                         var typing;
                         var eraseTimeout;
                         var eraseSpeed = 25;
                         var eraseDelay = 1000; 
                         </script>
-                    <p  id="demo"></p>
-                
+                    <p> You can <span id="demo"></span></p>
+                    <!-- Element where the typing effect will appear -->
+  <h2>I am a <span class="typedText"></span></h2>
+
+  <!-- Include Typed.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Your custom script for the typing effect -->
+  <script>
+    var typingEffect = new Typed(".typedText", {
+      strings: ["QA Engineer", "Software Tester", "Automation Engineer"],
+      loop: true,  // Keep looping
+      typeSpeed: 100,  // Typing speed in milliseconds
+      backSpeed: 80,   // Speed for erasing the text
+      backDelay: 2000  // Wait before erasing the text
+    });
+  </script>
                 </div>
+            </div>
+            
               
                 <!-- ' <i class="fa fa-coffee"></i> '-->
                 <!-- contact form -->

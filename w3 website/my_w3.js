@@ -163,3 +163,4 @@ function typeWriter() {
       i = 0;  // Reset the index when everything is erased
     }
   }
+
