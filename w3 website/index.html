@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="./my_w3.js"></script>
+        <script src="./typed.js"></script>
                <style>
             body,
             h1,
@@ -127,6 +128,23 @@
     <!-- Container (About Section) -->
     <div class="w3-content w3-container w3-border w3-border-radius-20" id="about">
         <h3 class="w3-center">ABOUT ME</h3>
+
+        <!-- Element where the typing effect will appear -->
+         <h4 class="w3-left-shifted">I am a <span class="typedText"></span></h4>
+
+ 
+  <!-- The typing effect -->
+  <script>
+    var typingEffect = new Typed(".typedText", {
+      strings: ["QA Engineer", "Software QA Tester", "Automation Engineer", "QA Analyst"],
+      loop: true,  // Keep looping
+      typeSpeed: 50,  // Typing speed in milliseconds
+      backSpeed: 50,   // Speed for erasing the text
+      backDelay: 2000  // Wait before erasing the text
+    });
+  </script>
+
+
         <p class="w3-center"><em>I'm passionate about ensuring the quality and excellence of digital products.</em></p>
         <p> I'm a results-driven QA Engineer you can count on. 
             I have a proven track record of 7+ years in ensuring the quality and excellence of digital products.
@@ -140,9 +158,9 @@
         <div class="w3-row w3-round-large">
             <div class="w3-col m6 w3-center w3-padding-large">
                 <h4><b><i class="fa w3-margin-right"></i>Vald Rutskyi</b></h4><br>
-                <div class="flip-card">
+                <div class="flip-card w3-round-large">
                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                        <div class="flip-card-front w3-round-large">
                 <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/square.jpg" class=" w3-image w3-opacity w3-hover-opacity-off w3-round-large" alt="Photo of Me"
                     > 
                 </div>
@@ -231,7 +249,7 @@
 
      <!-- Container (Projects section) -->
      <div class="w3-content w3-container w3-border w3-border-radius-20" id="projects">
-        <h3 class="w3-center ">PROJECTS **UNDER CONSTRUCTION**</h3> <!-- Don't forget to remove the UNDER CONSTRUCTION -->
+        <h3 class="w3-center ">PROJECTS </h3> <!-- Don't forget to remove the UNDER CONSTRUCTION -->
         <p class="w3-center"><em>Several words about projects I worked on.</em></p>
         <!-- <p> I'm a results-driven QA Engineer you can count on. 
             I have a proven track record of 7+ years in ensuring the quality and excellence of digital products.
@@ -250,14 +268,15 @@
         <div class="w3-row w3-border w3-border-radius-20">
             <div class="w3-col m6 w3-center w3-padding-large">
                 <h4><b><i class="w3-margin-right " style="font-size: 12px;"></i> <a href="https://upwardaviation.ca/" >Upward Aviation Services</a> </b></h4>
-                <p><i class="fa w3-margin-right"></i>Aug 2024 -  Present </p><br>
+                <p><i class="fa w3-margin-right"></i>Aug 2024 -  Present, <em>Calgary, Alberta, Canada </em></p><br>
+                
                 <img src="https://upwardaviation.ca/wp-content/uploads/2024/08/Logo-1-289x300.png" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Upward Aviation Services Logo"
                     width="300" height="300">
             </div>
 
             <!-- To Hide this text on small devices change "w2-hide-small" to "w3-hide-small"  -->
             <div class="w3-col m6 w2-hide-small w3-padding-large">
-                <p>This project started as a website renewal.
+                <p> This project started as a website renewal.
                 <br> But we ended up with almost the whole rebranding process. Upward Aviation Services is a Calgary-based company that provides different aircraft-related services, from training to import assistance.
                 <br> At first, we created a website. The next step was creating a logo, which was warmly accepted by the company owners. After that, we created mockups for printing the company logo on clothes. The project is ongoing.
                 <br> This project is developed with the assistance of <a href="https://www.behance.net/natalia-lozovska"> Natalia Lozovska</a>.</p>
@@ -273,7 +292,7 @@
                     </ul>
                 </span>
                  <!-- Load More Button  -->
-                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="position: inherit; left: 40%; bottom: 10%;" onclick="upwardFunction()" id="myBtn2">Load more</button>
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="position: inherit; left: 40%; bottom: 10%;" id="myBtn2" onclick="toggleContent('dots2', 'more2', 'myBtn2')">Load more</button>
                 
             </div>
             
@@ -283,13 +302,13 @@
                 <br>
                               
             </div>
-      <span id="dots7"></span> 
-                    <span id="more7" style="display: none;">
+      <span id="dots8"></span> 
+                    <span id="more8" style="display: none;">
          <!-- SeeHearAct project lines 254 - 315 -->
         <div class="w3-row w3-border w3-border-radius-20">
             <div class="w3-col m6 w3-right w3-padding-large">
                 <h4><b><i class="fa w3-margin-right"></i><a href="https://seehearact.org/">See.Hear.Act</a> </b></h4>
-                <p><i class="fa w3-margin-right"></i>Aug 2024 -  Sep 2024 </p><br>
+                <p><i class="fa w3-margin-right"></i>Aug 2024 -  Sep 2024, <em>Calgary, Alberta, Canada </em></p><br>
                 <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/2024-09-10_11-40-43-copy.png" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="See Hear Act image"
                     width="300" height="300">
             </div>
@@ -313,7 +332,7 @@
                     </ul>
                 </span>
                 <!-- Load More Button  -->
-                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" onclick="seeFunction()" id="myBtn3">Load more</button>
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn3" onclick="toggleContent('dots3', 'more3', 'myBtn3')">Load more</button>
             </div>
             
           
@@ -330,7 +349,7 @@
             <div class="w3-row w3-border w3-border-radius-20">
                 <div class="w3-col m6 w3-center w3-padding-large">
                     <h4><b><i class="w3-margin-right " style="font-size: 12px;"></i> <a href="https://abbeydale.org" >Abbeydale Christian Fellowship</a> </b></h4>
-                    <p><i class="fa w3-margin-right"></i>May 2024 -  Present </p><br>
+                    <p><i class="fa w3-margin-right"></i>May 2024 -  Present, <em>Calgary, Alberta, Canada </em> </p><br>
                     <img src="https://abbeydale.org/wp-content/uploads/2019/05/ACF_Logo-390x241.jpg" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Abbeydale Christian Fellowship logo"
                         width="300" height="300">
                 </div>
@@ -354,7 +373,7 @@
                     </span>
                       <!-- Load More Button  -->
                     
-                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" onclick="abbeydaleFunction()" id="myBtn4">Load more</button>
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn4" onclick="toggleContent('dots4', 'more4', 'myBtn4')">Load more</button>
                 </div>
             
               
@@ -370,8 +389,8 @@
         <div class="w3-row w3-border w3-border-radius-20">
             <div class="w3-col m6 w3-right w3-padding-large">
                 <h4><b><i class="fa w3-margin-right"></i><a href="https://www.portside.co/">Portside</a> </b></h4>
-                <p><i class="fa w3-margin-right"></i>Feb 2022 -  Feb 2024 </p><br>
-                <img src="https://www.portside.co/static/img/logo-dark-standart.svg" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="See Hear Act image"
+                <p><i class="fa w3-margin-right"></i>Feb 2022 -  Feb 2024 <em>California, US, Remote</em></p><br>
+                <img src="https://www.portside.co/static/img/logo-dark-standart.svg" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Portside logo"
                     width="300" height="300">
             </div>
 
@@ -396,7 +415,7 @@
                     </ul>
                 </span>
                 <!-- Load More Button  -->
-                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" onclick="portsideFunction()" id="myBtn5">Load more</button>
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn5" onclick="toggleContent('dots5', 'more5', 'myBtn5')">Load more</button>
             </div>
                 
                   
@@ -413,8 +432,8 @@
             <div class="w3-row w3-border w3-border-radius-20">
                 <div class="w3-col m6 w3-center w3-padding-large">
                     <h4><b><i class="w3-margin-right " style="font-size: 12px;"></i> <a href="http://www.re-flekt.com/" >RE'FLEKT</a> </b></h4>
-                    <p><i class="fa w3-margin-right"></i>Apr 2021 -  Dec 2021 </p><br>
-                    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQEgbbIzD8Aslg/company-logo_200_200/company-logo_200_200/0/1630543713206/reflekt_gmbh_logo?e=1734566400&v=beta&t=FpGXzyVTnWlX48qc3CVsittHdBKBfkunSjLFxO1RhfY" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Abbeydale Christian Fellowship logo"
+                    <p><i class="fa w3-margin-right"></i>Apr 2021 -  Dec 2021 <em>Munich, Germany, Remote</em></p><br>
+                    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQEgbbIzD8Aslg/company-logo_200_200/company-logo_200_200/0/1630543713206/reflekt_gmbh_logo?e=1734566400&v=beta&t=FpGXzyVTnWlX48qc3CVsittHdBKBfkunSjLFxO1RhfY" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Reflekt logo"
                         width="300" height="300">
                 </div>
     
@@ -437,7 +456,7 @@
                     </span>
                       <!-- Load More Button  -->
                     
-                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" onclick="reflektFunction()" id="myBtn6">Load more</button>
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn6" onclick="toggleContent('dots6', 'more6', 'myBtn6')">Load more</button>
                 </div>
             
                                
@@ -445,8 +464,97 @@
             <div>
                 <br>                          
             </div>
+
+               <!-- SBDIgital project lines  -->
+        <div class="w3-row w3-border w3-border-radius-20">
+            <div class="w3-col m6 w3-right w3-padding-large">
+                <h4><b><i class="fa w3-margin-right"></i><a href="https://www.sbdigital.lt/">SBDigital, UAB</a> </b></h4>
+                <p><i class="fa w3-margin-right"></i>Aug 2020 -  Mar 2021 <em>Vilnius, Lithuania, Remote</em></p><br>
+                <img src="https://media.licdn.com/dms/image/v2/C4E0BAQGlDe4LvmuMQA/company-logo_200_200/company-logo_200_200/0/1631374727281/sbdigital_logo?e=1735171200&v=beta&t=u0geuo-cbemwEb7wxaECUXuC-BC6UcAcJyxn2CPZHFs" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="SBDigital logo"
+                    width="300" height="300">
+            </div>
+
+            <!-- To Hide this text on small devices change "w2-hide-small" to "w3-hide-small" --> 
+            <div class="w3-col m6 w2-hide-small w3-padding-large">
+                <p>  Collaborating with the SBDigital team, contributed to creating a cross-platform browser catered to Muslim users by aggregating essential features. 
+                <br> The browser was successfully developed for Android, iOS, OSx, and Windows platforms, offering unique functionalities such as Halal browsing and Azan notifications.
+            
+                </p> 
+            
+                <!-- Dots for collapsed content and hidden content span -->
+                <span id="dots7"></span> 
+                <span id="more7" style="display: none;">
+                    <ul>
+                        <li> Used experience in exploratory testing to find hidden defects and potential usability issues within applications.</li>
+                        <li> Applied a strategic and systematic approach, utilizing exploratory testing as a proactive measure to identify unexpected issues, contributing to a more robust and resilient product.</li>
+                        <li> Demonstrated proficiency in creating detailed test cases and test suites for both new features and regression testing.</li>
+                        <li> Conducted thorough review, analysis, and documentation of test results using tools such as Confluence, Jira, and Google Docs.</li>
+                        <li> Used a diverse set of testing environments and devices to validate the consistent performance of applications, contributing to a reliable and uniform user experience.</li>
+                        <li> Was a sole QA Engineer on the project</li>
+                        
+                    </ul>
+                </span>
+                <!-- Load More Button  -->
+                <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn7" onclick="toggleContent('dots7', 'more7', 'myBtn7')">Load more</button>
+            </div>
+                          
+                  
+            
+        </div>
+
+        <div>
+            <br>
+                          
+        </div>
+
+        <!-- Access softek project  -->
+        <div class="w3-row w3-border w3-border-radius-20">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <h4><b><i class="w3-margin-right " style="font-size: 12px;"></i> <a href="https://www.accesssoftek.com/" >Access Softek</a> </b></h4>
+                <p><i class="fa w3-margin-right"></i>Oct 2016 -  Apr 2020 <em>California, US, Remote</em></p><br>
+                <img src="https://accesssoftek.com/wp-content/uploads/2024/05/accesssoftek-logo-color.svg" class="w3-round-large w3-image w3-opacity w3-hover-opacity-off" onclick="onClick(this)" alt="Access Softek logo"
+                    width="300" height="300">
+            </div>
+
+            <!-- To Hide this text on small devices change "w2-hide-small" to "w3-hide-small"  -->
+            <div class="w3-col m6 w2-hide-small w3-padding-large">
+                <p>  While working at Access Softek, progressed from a Junior Software Quality Assurance Engineer to a Middle Software Quality Assurance Engineer and Scrum Master.
+                <br> As a team member, actively contributed to the testing of a digital banking application suite. Which contained an administrative interface and user-centric web and mobile apps.
+                <br> One of the key features of this suite was transfers through an intuitive three-column screen. Users only needed to specify the destination, source, and optional recurrence for a seamless experience.  
+                <br> Conducted manual testing of web and mobile applications. Executed Record and Replay automation test suits using Selenium Web Driver. Created detailed test documentation, and managed the whole cycle of bug reporting using Jira.</p>
+            
+                <!-- Dots for collapsed content and hidden content span -->
+                <span id="dots9"></span> 
+                <span id="more9" style="display: none;">
+                    <ul>
+                        <li> Sprint Planning activities (creating Sprint Plan & discussing it with the team, Sprint Check-in meeting participation).</li>
+                        <li> Scheduling & holding Team Meetings (daily, retro, demo).</li>
+                        <li> Providing help with process organization for the QA Team lead.</li>
+                        <li> Helping with regression planning by providing QA availability information for the regression coordinator.</li>
+                        <li> Exploratory testing of applications, based on experience.</li>
+                        <li> Test documentation creation (detailed test cases, test suits) for new features & regression test documentation updating.</li>
+                        <li> Review, analyze and document test results and metrics (work with CF, Jira, google-docs).</li>
+                        <li> Testing ADA implementation & compatibility of the product on desktop & mobile devices</li>
+                    </ul>
+                </span>
+                  <!-- Load More Button  -->
+                
+            <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn9" onclick="toggleContent('dots9', 'more9', 'myBtn9')">Load more</button>
+            </div>
+        
+                           
+        </div>
+        <div>
+            <br>                          
+        </div>
+
+
         </span> 
-        <button class="w3-button w3-padding-large w3-light-grey w3-round-large" onclick="projectsFunction()" id="myBtn7">Load more</button>
+        <button class="w3-button w3-padding-large w3-light-grey w3-round-large" id="myBtn8" onclick="toggleContent('dots8', 'more8', 'myBtn8')">Load more</button>
+        </div>
+        <div>
+            <br>
+                          
         </div>
         </div> 
         <div>
@@ -588,7 +696,7 @@
         </div>
     </span>
 
-    <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="margin-top:64px" onclick="myFunction1()" id="myBtn1">Load more</button>
+    <button class="w3-button w3-padding-large w3-light-grey w3-round-large" style="margin-top:64px" id="myBtn1" onclick="toggleContent('dots1', 'more1', 'myBtn1')">Load more</button>
 </div>
 <div>
     <br>
@@ -622,41 +730,46 @@
 
         <div class="w3-row w3-padding-32 w3-section">
             <div class="w3-col m4 w3-container" >
-                <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5015.965850037989!2d-114.08088330062834!3d51.05340308096748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe58f8970f3%3A0x5f0abb68c3235805!2sEau%20Claire%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1722305917929!5m2!1sen!2sca" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+                <!-- <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%"> -->
             </div>
             <div class="w3-col m8 w3-panel">
                 <div class="w3-large w3-margin-bottom">
-                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Calgary, Canada<br>
+                    <a href="https://maps.app.goo.gl/qMB859fJ1f9XLBYs6" target="_blank">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Eau Claire, Calgary, Canada<br>
+                </a>
+                <a href= "tel:+14036293752">
                     <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1(403)-629-3752<br>
+            </a>
+                    <a href="https://www.linkedin.com/in/vladyslav-rutskyi" target="_blank">
+                    <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> LinkedIn: Vlad Rutskyi<br>
+                </a>
+                    <a href="https://github.com/vladrutskiy" target="_blank">
+                    <i class="fa fa-github fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> GitHub: Vlad Rutskyi<br>
+                </a>
+                <a href="mailto:v.rutskiy@icloud.com">
                     <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
-                    v.rutskiy@icloud.com<br>
+                    v.rutskiyaticloud.com<br>
+                </a>
                     <script>
                         var i = 0;
                         
-                        var txt = 'swing by for a cup of coffe, or contact me.';
+                        var txt = 'to swing by for a cup of coffe, or contact me.';
                         var speed = 50; 
                         var typing;
                         var eraseTimeout;
                         var eraseSpeed = 25;
                         var eraseDelay = 1000; 
                         </script>
-                    <p> You can <span id="demo"></span></p>
-                    <!-- Element where the typing effect will appear -->
-  <h2>I am a <span class="typedText"></span></h2>
-
-  <!-- Include Typed.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- Your custom script for the typing effect -->
-  <script>
-    var typingEffect = new Typed(".typedText", {
-      strings: ["QA Engineer", "Software Tester", "Automation Engineer"],
-      loop: true,  // Keep looping
-      typeSpeed: 100,  // Typing speed in milliseconds
-      backSpeed: 80,   // Speed for erasing the text
-      backDelay: 2000  // Wait before erasing the text
-    });
-  </script>
+                    <p> You are welcome <span id="demo"></span></p>
+                    
                 </div>
             </div>
             
@@ -691,14 +804,19 @@
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey w3-round-large"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <!-- <i class="fa fa-w3 w3-hover-opacity"></i> -->
+            <!-- <i class="fa fa-instagram w3-hover-opacity"></i>
             <i class="fa fa-snapchat w3-hover-opacity"></i>
             <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i> -->
+            <a href="https://www.linkedin.com/in/vladyslav-rutskyi" target="_blank">
             <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-    <a class="w3-button w3-round-large w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+        </a>
+        <a href="https://github.com/vladrutskiy" target="_blank">
+            <i class="fa fa-github w3-hover-opacity"></i>
+        </a>
+    <p> <i class="fa fa-copyright w3-small">All rights reserved.</i></p>
+    <!-- <a class="w3-button w3-round-large w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> -->
     <!-- Footer end. -->
     </footer>
 

@@ -1368,6 +1368,12 @@ a {
   text-align: center !important
 }
 
+.w3-left-shifted {
+  text-align: center;
+  /* position: relative;
+  right: -37% */
+}
+
 .w3-border-radius-20{
   border-radius: 20px;
     border: 1px;
