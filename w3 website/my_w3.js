@@ -30,26 +30,26 @@ function toggleFunction() {
 // typewriter function
 function typeWriter() {
     if (i < txt.length) {
-      document.getElementById("demo").innerHTML += txt.charAt(i);
-      i++;
-      typing = setTimeout(typeWriter, speed); // Save the timeout to be cleared later
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        typing = setTimeout(typeWriter, speed); // Save the timeout to be cleared later
     }
-  }
-  
-  function startErasing() {
+}
+
+function startErasing() {
     clearTimeout(typing);  // Stop typing if it hasn't finished
     eraseTimeout = setTimeout(eraseText, eraseDelay);  // Wait before erasing
-  }
-  
-  function eraseText() {
+}
+
+function eraseText() {
     var demoText = document.getElementById("demo").innerHTML;
     if (demoText.length > 0) {
-      document.getElementById("demo").innerHTML = demoText.substring(0, demoText.length - 1);  // Erase one character at a time
-      setTimeout(eraseText, eraseSpeed);  // Continue erasing at the given speed
+        document.getElementById("demo").innerHTML = demoText.substring(0, demoText.length - 1);  // Erase one character at a time
+        setTimeout(eraseText, eraseSpeed);  // Continue erasing at the given speed
     } else {
-      i = 0;  // Reset the index when everything is erased
+        i = 0;  // Reset the index when everything is erased
     }
-  }
+}
 
 //hide and show content (load more button functionality)
 function toggleContent(dotsId, moreTextId, btnId) {
@@ -67,3 +67,32 @@ function toggleContent(dotsId, moreTextId, btnId) {
         moreText.style.display = "inline";  // Show additional content
     }
 }
+
+// Basic form validation function
+function validateForm() {
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    // Name validation: check if it's at least 3 characters long
+    if (name.length < 2) {
+        alert("Name must be at least 2 characters long.");
+        return false;
+    }
+
+    // Email validation: built-in validation for 'type="email"' is already in place
+    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Message validation: check if the message isn't empty
+    if (message === "") {
+        alert("Please enter a message.");
+        return false;
+    }
+
+    return true; // If all validations pass, the form will be submitted
+}
+
+ 
