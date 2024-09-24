@@ -2081,3 +2081,22 @@ a {
   color: white;
   transform: rotateY(180deg);
 }
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.success-message {
+  color: green;
+  font-size: 14px;
+  display: none;
+  margin-top: 10px;
+}
+.mandatory::after {
+  content: " *";
+  color: red;
+}
+.input-error {
+  border: 2px solid red;
+}

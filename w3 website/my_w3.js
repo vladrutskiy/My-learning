@@ -68,31 +68,3 @@ function toggleContent(dotsId, moreTextId, btnId) {
     }
 }
 
-// Basic form validation function
-function validateForm() {
-    var name = document.getElementById("name").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var message = document.getElementById("message").value.trim();
-
-    // Name validation: check if it's at least 3 characters long
-    if (name.length < 2) {
-        alert("Name must be at least 2 characters long.");
-        return false;
-    }
-
-    // Email validation: built-in validation for 'type="email"' is already in place
-    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        alert("Please enter a valid email address.");
-        return false;
-    }
-
-    // Message validation: check if the message isn't empty
-    if (message === "") {
-        alert("Please enter a message.");
-        return false;
-    }
-
-    return true; // If all validations pass, the form will be submitted
-}
-
- 
