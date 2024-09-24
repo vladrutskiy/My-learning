@@ -2100,3 +2100,9 @@ a {
 .input-error {
   border: 2px solid red;
 }
+.captcha-error {
+  color: red;
+  font-size: 12px;
+  display: none;
+  margin-top: 10px;
+}

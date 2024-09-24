@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <title>Vlad Rutskyi personal website</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta http-equiv="Content-Security-Policy" content="
+           default-src 'self';
+            script-src 'self' https://js.hcaptcha.com https://newassets.hcaptcha.com blob:;
+           frame-src https://*.hcaptcha.com;
+           style-src 'self' 'unsafe-inline';
+            connect-src https://*.hcaptcha.com;
+         img-src 'self' data: https://*.hcaptcha.com;
+            "> -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self';
+            script-src 'self' https://js.hcaptcha.com https://newassets.hcaptcha.com blob:;
+            frame-src https://*.hcaptcha.com https://hcaptcha.com;
+            style-src 'self' 'unsafe-inline';
+            connect-src https://*.hcaptcha.com https://hcaptcha.com;
+            img-src 'self' data: https://hcaptcha.com https://*.hcaptcha.com;
+        "> -->
+       
         <link rel="stylesheet" href="./my_w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,9 +31,11 @@
         <script>
                (function(){
                emailjs.init("U62dbmqo5insWsPT2"); 
-  })();
+              })();
         </script>
-               <style>
+         <!-- Include hCaptcha API -->
+        <!-- <script src="./hcaptcha.js" async defer></script>
+               <style> -->
             body,
             h1,
             h2,
@@ -803,6 +823,10 @@
                   <label for="message" class="mandatory">Message</label>
                   <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
                   <span class="error-message" id="messageError">Message is required.</span>
+
+                  <!-- hCaptcha widget -->
+                 <div class="h-captcha" data-sitekey="5f90600a-b6f4-47e0-89dc-b1eaf6546bfa"></div>
+                 <span class="captcha-error" id="captchaError">Please complete the captcha verification.</span>
               
                   <button class="w3-button w3-light-grey w3-round-large w3-left w3-section" type="submit">
                     <i class="fa fa-paper-plane"></i> Send Message
@@ -839,15 +863,16 @@
                 var name = document.getElementById('name').value.trim();
                 var email = document.getElementById('email').value.trim();
                 var message = document.getElementById('message').value.trim();
+                var hcaptchaResponse = document.querySelector('.h-captcha textarea[name="h-captcha-response"]').value; // hCaptcha response
 
                 // Validation flags
                 var isValid = true;
 
               // Validate name
                if (!name) {
-        showError('name', 'nameError', 'Name is required.');
-        isValid = false;
-      } else if (name.length < 2) {
+                    showError('name', 'nameError', 'Name is required.');
+                  isValid = false;
+                 } else if (name.length < 2) {
                   showError('name', 'nameError', 'Name must be at least 2 characters long.');
                 isValid = false;
                  } else {
