@@ -11,13 +11,10 @@
         <script src="./my_w3.js"></script>
         <script src="./typed.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script>
-               (function(){
-               emailjs.init("U62dbmqo5insWsPT2"); 
-              })();
-        </script>
-         <!-- Include hCaptcha API -->
-        <!-- <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
+        <script> (function(){ emailjs.init("U62dbmqo5insWsPT2"); })();</script>
+         <!-- Include reCaptcha API -->
+         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
                <style>
             body,
             h1,
@@ -807,9 +804,8 @@
                   <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
                   <span class="error-message" id="messageError">Message is required.</span>
 
-                  <!-- hCaptcha widget -->
-                 <div class="h-captcha" data-sitekey="5f90600a-b6f4-47e0-89dc-b1eaf6546bfa"></div>
-                 <span class="captcha-error" id="captchaError">Please complete the captcha verification.</span>
+                  <!-- adding reCaptcha -->
+                  <div class="g-recaptcha" data-sitekey="6Le8RE4qAAAAACv_wBMWg3aBWHBeFl7RHFoLdC92"></div>
               
                   <button class="w3-button w3-light-grey w3-round-large w3-left w3-section" type="submit">
                     <i class="fa fa-paper-plane"></i> Send Message
@@ -823,6 +819,27 @@
                       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                        return emailRegex.test(email);
                         }
+
+                        // Validate reCAPTCHA and form fields
+                         function validateRecaptcha(event) {
+                        event.preventDefault(); // Prevent default submission
+
+                        var recaptchaResponse = grecaptcha.getResponse();
+                        var isValid = true;
+
+                        // Validate reCAPTCHA
+                        if (!recaptchaResponse) {
+                        document.getElementById('recaptchaError').style.display = 'block';
+                        isValid = false;
+                        } else {
+                        document.getElementById('recaptchaError').style.display = 'none';
+                         }
+
+                        // If form is valid and reCAPTCHA is verified, proceed
+                        if (isValid) {
+                       sendEmail(); // Call your email-sending function here
+                       }
+                      }
  
                          // Display error message for each field
                         function showError(fieldId, errorMessageId, message) {
@@ -846,7 +863,7 @@
                 var name = document.getElementById('name').value.trim();
                 var email = document.getElementById('email').value.trim();
                 var message = document.getElementById('message').value.trim();
-                var hcaptchaResponse = document.querySelector('.h-captcha textarea[name="h-captcha-response"]').value; // hCaptcha response
+                
 
                 // Validation flags
                 var isValid = true;
@@ -912,6 +929,8 @@
               });
           });
                 </script>
+
+      
                 <!-- 
                 <form action="/action_page.php" target="_blank">
                     <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
