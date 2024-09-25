@@ -782,154 +782,138 @@
                 <!-- ' <i class="fa fa-coffee"></i> '-->
 
 
-                <!-- contact form -->
-                <title>Contact Form</title>
-               
-              
-                <div id="successMessage" class="success-message">Message sent successfully!</div>
-  
-                <form id="contactForm">
-                  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                    <div class="w3-half">
-                      <label for="name" class="mandatory">Name & Last Name</label>
-                      <input class="w3-input w3-border" type="text" id="name" placeholder="Name & Last Name" name="name" required>
-                      <span class="error-message" id="nameError">Name is required.</span>
-                    </div>
-                    <div class="w3-half">
-                      <label for="email" class="mandatory">Email</label>
-                      <input class="w3-input w3-border" type="email" id="email" placeholder="Email" name="email" required>
-                      <span class="error-message" id="emailError">Please enter a valid email address.</span>
-                    </div>
-                  </div>
-                  <label for="message" class="mandatory">Message</label>
-                  <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
-                  <span class="error-message" id="messageError">Message is required.</span>
-
-                  <!-- adding reCaptcha -->
-                  <div class="g-recaptcha" data-sitekey="6Le8RE4qAAAAACv_wBMWg3aBWHBeFl7RHFoLdC92"></div>
-              
-                  <button class="w3-button w3-light-grey w3-round-large w3-left w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> Send Message
-                  </button>
-                </form>
-              
-                <script>
-
-                   // Email validation function using regex
-                    function validateEmail(email) {
-                      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                       return emailRegex.test(email);
-                        }
-
-                        // Validate reCAPTCHA and form fields
-                         function validateRecaptcha(event) {
-                        event.preventDefault(); // Prevent default submission
-
-                        var recaptchaResponse = grecaptcha.getResponse();
-                        var isValid = true;
-
-                        // Validate reCAPTCHA
-                        if (!recaptchaResponse) {
-                        document.getElementById('recaptchaError').style.display = 'block';
-                        isValid = false;
-                        } else {
-                        document.getElementById('recaptchaError').style.display = 'none';
-                         }
-
-                        // If form is valid and reCAPTCHA is verified, proceed
-                        if (isValid) {
-                       sendEmail(); // Call your email-sending function here
-                       }
-                      }
- 
-                         // Display error message for each field
-                        function showError(fieldId, errorMessageId, message) {
-                        document.getElementById(fieldId).classList.add('input-error');
-                        const errorElement = document.getElementById(errorMessageId);
-                        errorElement.style.display = 'block';
-                        errorElement.innerHTML = message;
-                         }
-
-                   // Hide error message for each field
-                   function hideError(fieldId, errorMessageId) {
-                  document.getElementById(fieldId).classList.remove('input-error');
-                  document.getElementById(errorMessageId).style.display = 'none';
-                   }
-
-                // Handle form submission
-                 document.getElementById('contactForm').addEventListener('submit', function(event) {
-                  event.preventDefault(); // Prevent default form submission
-
-                // Get form values
-                var name = document.getElementById('name').value.trim();
-                var email = document.getElementById('email').value.trim();
-                var message = document.getElementById('message').value.trim();
                 
+                <!-- Success message -->
+<div id="successMessage" class="success-message">Message sent successfully!</div>
 
-                // Validation flags
-                var isValid = true;
+<!-- Contact Form -->
+<form id="contactForm">
+    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+            <label for="name" class="mandatory">Name & Last Name</label>
+            <input class="w3-input w3-border" type="text" id="name" placeholder="Name & Last Name" name="name" required>
+            <span class="error-message" id="nameError">Name is required and must be at least 2 characters long.</span>
+        </div>
+        <div class="w3-half">
+            <label for="email" class="mandatory">Email</label>
+            <input class="w3-input w3-border" type="email" id="email" placeholder="Email" name="email" required>
+            <span class="error-message" id="emailError">Please enter a valid email address.</span>
+        </div>
+    </div>
+    <label for="message" class="mandatory">Message</label>
+    <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
+    <span class="error-message" id="messageError">Message is required.</span>
 
-              // Validate name
-               if (!name) {
-                    showError('name', 'nameError', 'Name is required.');
-                  isValid = false;
-                 } else if (name.length < 2) {
-                  showError('name', 'nameError', 'Name must be at least 2 characters long.');
-                isValid = false;
-                 } else {
-                 hideError('name', 'nameError');
-                 }
+    <!-- Google reCAPTCHA widget -->
+    <div class="g-recaptcha" data-sitekey="6Le8RE4qAAAAACv_wBMWg3aBWHBeFl7RHFoLdC92"></div>
 
+    <button class="w3-button w3-light-grey w3-round-large w3-left w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> Send Message
+    </button>
+</form>
 
-             // Validate email
-             if (!email) {
-             showError('email', 'emailError', 'Email is required.');
-             isValid = false;
-             } else if (!validateEmail(email)) {
-             showError('email', 'emailError', 'Please enter a valid email address.');
-             isValid = false;
-            }  
-            else {
-          hideError('email', 'emailError');
-               }
+<script>
+    // Email validation function using regex
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
-            // Validate message
-             if (!message) {
-           showError('message', 'messageError', 'Message is required.');
-             isValid = false;
-                } else {
-               hideError('message', 'messageError');
-                  }
+    // Show error message for a specific field
+    function showError(fieldId, errorMessageId, message) {
+        document.getElementById(fieldId).classList.add('input-error');
+        const errorElement = document.getElementById(errorMessageId);
+        errorElement.style.display = 'block';
+        errorElement.innerHTML = message;
+    }
 
-                  // If validation fails, return
-                 if (!isValid) {
-                    return;
-                 }
+    // Hide error message for a specific field
+    function hideError(fieldId, errorMessageId) {
+        document.getElementById(fieldId).classList.remove('input-error');
+        document.getElementById(errorMessageId).style.display = 'none';
+    }
 
-                 // Prepare the template parameters for EmailJS
-                  var templateParams = {
-                name: name,
-                email: email,
-                message: message
-                };
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
 
-             // Send email via EmailJS
-               emailjs.send('service_bxhkmnh', 'template_du4ima7', templateParams)
-               .then(function(response) {
-               document.getElementById('successMessage').style.display = 'block';
+        // Get form values
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var message = document.getElementById('message').value.trim();
 
-              // Clear the form fields after successful submission
-               document.getElementById('contactForm').reset();
+        // Validate reCAPTCHA
+        var recaptchaResponse = grecaptcha.getResponse();
+        if (recaptchaResponse.length === 0) {
+            showError('g-recaptcha', 'nameError', 'Please verify that you are not a robot.');
+            return;
+        }
 
-              // Hide the success message after a few seconds
-              setTimeout(function() {
-              document.getElementById('successMessage').style.display = 'none';
-               }, 5000); // Hide after 5 seconds
-               }, function(error) {
+        // Validation flags
+        var isValid = true;
+
+        // Validate name
+        if (!name) {
+            showError('name', 'nameError', 'Name is required.');
+            isValid = false;
+        } else if (name.length < 2) {
+            showError('name', 'nameError', 'Name must be at least 2 characters long.');
+            isValid = false;
+        } else {
+            hideError('name', 'nameError');
+        }
+
+        // Validate email
+        if (!email) {
+            showError('email', 'emailError', 'Email is required.');
+            isValid = false;
+        } else if (!validateEmail(email)) {
+            showError('email', 'emailError', 'Please enter a valid email address.');
+            isValid = false;
+        } else {
+            hideError('email', 'emailError');
+        }
+
+        // Validate message
+        if (!message) {
+            showError('message', 'messageError', 'Message is required.');
+            isValid = false;
+        } else {
+            hideError('message', 'messageError');
+        }
+
+        // If validation fails, return
+        if (!isValid) {
+            return;
+        }
+
+        // Prepare the template parameters for EmailJS
+        var templateParams = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        // Send email via EmailJS
+        emailjs.send('service_bxhkmnh', 'template_du4ima7', templateParams)
+            .then(function(response) {
+                document.getElementById('successMessage').style.display = 'block';
+
+                // Clear the form fields after successful submission
+                document.getElementById('contactForm').reset();
+                grecaptcha.reset(); // Reset the reCAPTCHA
+
+                // Hide the success message after a few seconds
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000); // Hide after 5 seconds
+            }, function(error) {
                 console.error('FAILED...', error);
-              });
-          });
-                </script>
+            });
+    });
+</script>
+
+
 
       
                 <!-- 
