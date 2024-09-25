@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Vlad Rutskyi personal website</title>
+        <link rel="icon" type="image/png" href="https://rutskyi.yotako.com/wp-content/uploads/2024/09/logo-transparent-png.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
@@ -12,8 +13,7 @@
         <script src="./typed.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script> (function(){ emailjs.init("U62dbmqo5insWsPT2"); })();</script>
-         <!-- Include reCaptcha API -->
-         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+         
 
                <style>
             body,
@@ -610,36 +610,47 @@
 
 
     <div class="w3-row-padding w3-center">
+
+        <div class="w3-col m3">
+            <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/mac-security.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                alt="Mac Security Masterclass">
+        </div>
+
         <div class="w3-col m3">
             <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/Phishing-attacs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
                 alt="Identify and Prevent Phishing Attacks: Before They Harm You">
         </div>
+
         <div class="w3-col m3">
             <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/information-security-fundamentals.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
                 alt="Information Security Fundamentals">
         </div>
+
         <div class="w3-col m3">
             <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/agile-and-scrum.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
                 alt="Professional Diploma in Agile and Scrum">
         </div>
 
-        <div class="w3-col m3">
-            <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/cyberSecurity.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-                alt="CyberSecurity Bootcamp">
-        </div>
-
+       
         
     </div>
     <span id="dots1"> </span>
     <span id="more1" style="display: none;">
         <div class="w3-row-padding w3-center w3-section">
             <div class="w3-col m3">
+                <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/09/cyberSecurity.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="CyberSecurity Bootcamp">
+            </div>
+
+            <div class="w3-col m3">
                 <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_PlayWright_23_07_24.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
                     alt="Introduction to Playwright">
             </div>
+
             <div class="w3-col m3">
                 <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_Postman_06_24.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Introduction to Postman API">
             </div>
+
             <div class="w3-col m3">
                 <img src="https://rutskyi.yotako.com/wp-content/uploads/2024/07/Intro_Postman_06_24.png" 
                 style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Introduction to Postman API">
@@ -784,125 +795,116 @@
 
                 
                 <!-- Success message -->
-<div id="successMessage" class="success-message">Message sent successfully!</div>
+            <div id="successMessage" class="success-message">Message sent successfully!</div>
 
-<!-- Contact Form -->
-<form id="contactForm">
-    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-        <div class="w3-half">
-            <label for="name" class="mandatory">Name & Last Name</label>
-            <input class="w3-input w3-border" type="text" id="name" placeholder="Name & Last Name" name="name" required>
-            <span class="error-message" id="nameError">Name is required and must be at least 2 characters long.</span>
-        </div>
-        <div class="w3-half">
-            <label for="email" class="mandatory">Email</label>
-            <input class="w3-input w3-border" type="email" id="email" placeholder="Email" name="email" required>
-            <span class="error-message" id="emailError">Please enter a valid email address.</span>
-        </div>
-    </div>
-    <label for="message" class="mandatory">Message</label>
-    <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
-    <span class="error-message" id="messageError">Message is required.</span>
+               <!-- Contact Form -->
+            <form id="contactForm">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                  <div class="w3-half">
+                     <label for="name" class="mandatory">Name & Last Name</label>
+                      <input class="w3-input w3-border" type="text" id="name" placeholder="Jhon Doe" name="name" required>
+                      <span class="error-message" id="nameError">Name is required and must be at least 2 characters long.</span>
+                    </div>
+                 <div class="w3-half">
+                   <label for="email" class="mandatory">Email</label>
+                   <input class="w3-input w3-border" type="email" id="email" placeholder="jhon@doe.com" name="email" required>
+                    <span class="error-message" id="emailError">Please enter a valid email address.</span>
+                   </div>
+                 </div>
+                <label for="message" class="mandatory">Message</label>
+                <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
+                <span class="error-message" id="messageError">Message is required.</span>
 
-    <!-- Google reCAPTCHA widget -->
-    <div class="g-recaptcha" data-sitekey="6Le8RE4qAAAAACv_wBMWg3aBWHBeFl7RHFoLdC92"></div>
+    
+               <button class="w3-button w3-light-grey w3-round-large w3-left w3-section" type="submit">
+               <i class="fa fa-paper-plane"></i> Send Message
+               </button>
+               </form>
 
-    <button class="w3-button w3-light-grey w3-round-large w3-left w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> Send Message
-    </button>
-</form>
+             <script>
+                       // Email validation function using regex
+                      function validateEmail(email) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                   return emailRegex.test(email);
+                      }
 
-<script>
-    // Email validation function using regex
-    function validateEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
+                      // Show error message for a specific field
+                      function showError(fieldId, errorMessageId, message) {
+                    document.getElementById(fieldId).classList.add('input-error');
+                    const errorElement = document.getElementById(errorMessageId);
+                    errorElement.style.display = 'block';
+                    errorElement.innerHTML = message;
+                    }
 
-    // Show error message for a specific field
-    function showError(fieldId, errorMessageId, message) {
-        document.getElementById(fieldId).classList.add('input-error');
-        const errorElement = document.getElementById(errorMessageId);
-        errorElement.style.display = 'block';
-        errorElement.innerHTML = message;
-    }
+                 // Hide error message for a specific field
+                function hideError(fieldId, errorMessageId) {
+                document.getElementById(fieldId).classList.remove('input-error');
+                document.getElementById(errorMessageId).style.display = 'none';
+                   }
 
-    // Hide error message for a specific field
-    function hideError(fieldId, errorMessageId) {
-        document.getElementById(fieldId).classList.remove('input-error');
-        document.getElementById(errorMessageId).style.display = 'none';
-    }
+                 // Handle form submission
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                 event.preventDefault(); // Prevent default form submission
 
-    // Handle form submission
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+                 // Get form values
+                 var name = document.getElementById('name').value.trim();
+                 var email = document.getElementById('email').value.trim();
+                 var message = document.getElementById('message').value.trim();
 
-        // Get form values
-        var name = document.getElementById('name').value.trim();
-        var email = document.getElementById('email').value.trim();
-        var message = document.getElementById('message').value.trim();
+       
+                 // Validation flags
+                var isValid = true;
 
-        // Validate reCAPTCHA
-        var recaptchaResponse = grecaptcha.getResponse();
-        if (recaptchaResponse.length === 0) {
-            showError('g-recaptcha', 'nameError', 'Please verify that you are not a robot.');
-            return;
-        }
+                // Validate name
+                if (!name) {
+                showError('name', 'nameError', 'Name is required.');
+                  isValid = false;
+                 } else if (name.length < 2) {
+                 showError('name', 'nameError', 'Name must be at least 2 characters long.');
+                  isValid = false;
+                 } else {
+                 hideError('name', 'nameError');
+                  }
 
-        // Validation flags
-        var isValid = true;
+                 // Validate email
+                 if (!email) {
+                 showError('email', 'emailError', 'Email is required.');
+                 isValid = false;
+                  } else if (!validateEmail(email)) {
+                  showError('email', 'emailError', 'Please enter a valid email address.');
+                  isValid = false;
+                  } else {
+                    hideError('email', 'emailError');
+                  }
 
-        // Validate name
-        if (!name) {
-            showError('name', 'nameError', 'Name is required.');
-            isValid = false;
-        } else if (name.length < 2) {
-            showError('name', 'nameError', 'Name must be at least 2 characters long.');
-            isValid = false;
-        } else {
-            hideError('name', 'nameError');
-        }
+                // Validate message
+                if (!message) {
+                 showError('message', 'messageError', 'Message is required.');
+                 isValid = false;
+                 } else {
+                 hideError('message', 'messageError');
+                 }
 
-        // Validate email
-        if (!email) {
-            showError('email', 'emailError', 'Email is required.');
-            isValid = false;
-        } else if (!validateEmail(email)) {
-            showError('email', 'emailError', 'Please enter a valid email address.');
-            isValid = false;
-        } else {
-            hideError('email', 'emailError');
-        }
+                 // If validation fails, return
+                 if (!isValid) {
+                   return;
+                    }
 
-        // Validate message
-        if (!message) {
-            showError('message', 'messageError', 'Message is required.');
-            isValid = false;
-        } else {
-            hideError('message', 'messageError');
-        }
+            // Prepare the template parameters for EmailJS
+             var templateParams = {
+             name: name,
+             email: email,
+             message: message
+            };
 
-        // If validation fails, return
-        if (!isValid) {
-            return;
-        }
-
-        // Prepare the template parameters for EmailJS
-        var templateParams = {
-            name: name,
-            email: email,
-            message: message
-        };
-
-        // Send email via EmailJS
-        emailjs.send('service_bxhkmnh', 'template_du4ima7', templateParams)
+          // Send email via EmailJS
+             emailjs.send('service_bxhkmnh', 'template_du4ima7', templateParams)
             .then(function(response) {
                 document.getElementById('successMessage').style.display = 'block';
 
                 // Clear the form fields after successful submission
                 document.getElementById('contactForm').reset();
-                grecaptcha.reset(); // Reset the reCAPTCHA
-
+                
                 // Hide the success message after a few seconds
                 setTimeout(function() {
                     document.getElementById('successMessage').style.display = 'none';
@@ -910,27 +912,10 @@
             }, function(error) {
                 console.error('FAILED...', error);
             });
-    });
-</script>
+             });
+             </script>
 
-
-
-      
-                <!-- 
-                <form action="/action_page.php" target="_blank">
-                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                        </div>
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                        </div>
-                    </div>
-                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                    <button class="w3-button w3-black w3-right w3-section" type="submit">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                    </button>
-                </form> -->
+        
             </div>
             
         </div>
@@ -940,7 +925,7 @@
 </div>
     
 
-    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <!-- Footer.  -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey w3-round-large"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <div class="w3-xlarge w3-section">
