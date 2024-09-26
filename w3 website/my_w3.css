@@ -2016,7 +2016,7 @@ a {
   font-weight: bold;
   margin: 0 auto;
   padding: 10px;
-  width: 50%;
+  width: 40%;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -2081,7 +2081,7 @@ a {
   color: white;
   transform: rotateY(180deg);
 }
-
+/* email messages */
 .error-message {
   color: red;
   font-size: 12px;
