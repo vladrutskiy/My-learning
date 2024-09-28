@@ -801,13 +801,18 @@
             <form id="contactForm">
                 <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                   <div class="w3-half">
-                     <label for="name" class="mandatory">Name & Last Name</label>
-                      <input class="w3-input w3-border" type="text" id="name" placeholder="Jhon Doe" name="name" required>
+                     <label for="name" class="mandatory">Name</label>
+                      <input class="w3-input w3-border" type="text" id="name" placeholder="John" name="name" required>
                       <span class="error-message" id="nameError">Name is required and must be at least 2 characters long.</span>
                     </div>
+                    <div class="w3-half">
+                        <label for="name" class="mandatory">Last Name</label>
+                         <input class="w3-input w3-border" type="text" id="lastname" placeholder="Doe" name="lastname" required>
+                         <span class="error-message" id="lastnameError">Name is required and must be at least 2 characters long.</span>
+                       </div>
                  <div class="w3-half">
                    <label for="email" class="mandatory">Email</label>
-                   <input class="w3-input w3-border" type="email" id="email" placeholder="jhon@doe.com" name="email" required>
+                   <input class="w3-input w3-border" type="email" id="email" placeholder="john@doe.com" name="email" required>
                     <span class="error-message" id="emailError">Please enter a valid email address.</span>
                    </div>
                  </div>
@@ -848,6 +853,7 @@
 
                  // Get form values
                  var name = document.getElementById('name').value.trim();
+                 var lastname = document.getElementById('lastname').value.trim();
                  var email = document.getElementById('email').value.trim();
                  var message = document.getElementById('message').value.trim();
 
@@ -864,6 +870,16 @@
                   isValid = false;
                  } else {
                  hideError('name', 'nameError');
+                  }
+                  // Validate lasname
+                if (!lastname) {
+                showError('lastname', 'lastnameError', 'last Name is required.');
+                  isValid = false;
+                 } else if (lastname.length < 2) {
+                 showError('lastname', 'lastnameError', 'Last Name must be at least 2 characters long.');
+                  isValid = false;
+                 } else {
+                 hideError('lastname', 'lastnameError');
                   }
 
                  // Validate email
@@ -893,6 +909,7 @@
             // Prepare the template parameters for EmailJS
              var templateParams = {
              name: name,
+             lastname: lastname,
              email: email,
              message: message
             };
