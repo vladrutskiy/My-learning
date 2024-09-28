@@ -815,6 +815,16 @@
                    <input class="w3-input w3-border" type="email" id="email" placeholder="john@doe.com" name="email" required>
                     <span class="error-message" id="emailError">Please enter a valid email address.</span>
                    </div>
+                 
+                   <div class="w3-half">
+                    <br>
+                    <label class="mandatory">
+                        <input type="checkbox" id="consentCheckbox" name="consent" required>
+                        
+                         I consent to have this website store my submitted information so they can respond to my inquiry.
+                      </label>
+                      <span id="consentError" style="color: red; display: none;">Please check this box to give consent.</span>
+                   </div>
                  </div>
                 <label for="message" class="mandatory">Message</label>
                 <textarea class="w3-input w3-border" id="message" placeholder="Message" name="message" required rows="4"></textarea>
@@ -899,6 +909,20 @@
                  isValid = false;
                  } else {
                  hideError('message', 'messageError');
+                 }
+                 
+                //  checkbox validation
+                 function validateForm() {
+                var consentCheckbox = document.getElementById('consentCheckbox');
+                var consentError = document.getElementById('consentError');
+
+                if (!consentCheckbox.checked) {
+                consentError.style.display = 'inline';  // Show error message
+                return false;  // Prevent form submission
+                } else {
+                consentError.style.display = 'none';  // Hide error message if checkbox is checked
+                }
+                return true;  // Allow form submission
                  }
 
                  // If validation fails, return
