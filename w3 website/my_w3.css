@@ -2106,3 +2106,56 @@ a {
   display: none;
   margin-top: 10px;
 }
+
+
+/* sliding text */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+.slide {
+  /* font-size: 24px;
+  padding: 20px;
+  background-color: lightblue; */
+  position: relative;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Start fully transparent */
+  transition: all 1s ease-in-out;
+  
+  
+}
+
+.slide[data-slide="left"] {
+  left: -22%; /* Start hidden from left */
+}
+
+.slide[data-slide="right"] {
+  right: -12%; /* Start hidden from right */
+}
+
+.slide[data-slide="bottom"] {
+  top: 10vh; /* Start hidden from bottom */
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1; /* Fully visible */
+}
+
+.slide[data-slide="left"].visible {
+  left: 0;
+}
+
+.slide[data-slide="right"].visible {
+  right: 0;
+}
+
+.slide[data-slide="bottom"].visible {
+  top: 0;
+}

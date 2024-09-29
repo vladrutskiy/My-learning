@@ -68,3 +68,21 @@ function toggleContent(dotsId, moreTextId, btnId) {
     }
 }
 
+// this helps text to slide
+window.addEventListener('scroll', function () {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => {
+        const slidePosition = slide.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;
+
+        if (slidePosition < screenPosition) {
+            slide.classList.add('visible');
+            slide.classList.remove('hidden');
+        }
+    });
+});
+
+// getting current year
+const yearSpan = document.getElementById("current-year");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
