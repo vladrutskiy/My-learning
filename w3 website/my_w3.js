@@ -51,22 +51,51 @@ function eraseText() {
     }
 }
 
-//hide and show content (load more button functionality)
-function toggleContent(dotsId, moreTextId, btnId) {
-    var dots = document.getElementById(dotsId);
-    var moreText = document.getElementById(moreTextId);
-    var btnText = document.getElementById(btnId);
+// Working hide and show content (load more button functionality)
+// function toggleContent(dotsId, moreTextId, btnId) {
+//     var dots = document.getElementById(dotsId);
+//     var moreText = document.getElementById(moreTextId);
+//     var btnText = document.getElementById(btnId);
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";  // Show dots if content is collapsed
-        btnText.innerHTML = "Load more";  // Change button text
-        moreText.style.display = "none";  // Hide additional content
-    } else {
-        dots.style.display = "none";  // Hide dots if content is expanded
-        btnText.innerHTML = "Load less";  // Change button text
-        moreText.style.display = "inline";  // Show additional content
+//     if (dots.style.display === "none") {
+//         dots.style.display = "inline";  // Show dots if content is collapsed
+//         btnText.innerHTML = "Load more";  // Change button text
+//         moreText.style.display = "none";  // Hide additional content
+//     } else {
+//         dots.style.display = "none";  // Hide dots if content is expanded
+//         btnText.innerHTML = "Load less";  // Change button text
+//         moreText.style.display = "inline";  // Show additional content
+
+//            }
+// }     
+    //   enchanced hide-show functionality
+    function toggleContent(dotsId, moreTextId, btnId) {
+        var dots = document.getElementById(dotsId);
+        var moreText = document.getElementById(moreTextId);
+        var btnText = document.getElementById(btnId);
+    
+        // Check if content is collapsed or expanded
+        if (dots.style.display === "none") {
+            // Collapse the additional content
+            dots.style.display = "inline";  // Show dots if content is collapsed
+            btnText.innerHTML = "Load more";  // Change button text
+            moreText.style.display = "none";  // Hide additional content
+    
+            // Scroll back to the button after collapsing (Show less clicked)
+            setTimeout(function() {
+                btnText.scrollIntoView({ behavior: 'auto', block: 'center' });
+            }, 0); // Small delay to handle collapse effect
+        } else {
+            // Expand the additional content
+            dots.style.display = "none";  // Hide dots if content is expanded
+            btnText.innerHTML = "Load less";  // Change button text
+            moreText.style.display = "inline";  // Show additional content
+    
+            // No scroll on expanding (Show more clicked)
+        }
     }
-}
+    
+    
 
 // this helps text to slide
 window.addEventListener('scroll', function () {
