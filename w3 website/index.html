@@ -14,6 +14,16 @@
         <script src="./typed.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script> (function(){ emailjs.init("U62dbmqo5insWsPT2"); })();</script>
+          <!-- Gogole analytics -->
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HSXLYFL4"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-G9HSXLYFL4');
+     </script>
        
 
                <style>
@@ -94,6 +104,7 @@
         </style>
     </head>
 <body>
+  
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
@@ -1000,10 +1011,17 @@
         <a href="https://github.com/vladrutskiy" target="_blank">
             <i class="fa fa-github w3-hover-opacity"></i>
         </a>
-    <p > <i class="fa fa-copyright w3-small" id="current-year">All rights reserved.</i></p>
+        <p class="w3-small"><i class="fa fa-copyright "></i> <span id="current-year"></span> All rights reserved.</p>
+    <!-- <p > <i class="fa fa-copyright w3-small" id="current-year"> All rights reserved.</i></p> -->
     <!-- <a class="w3-button w3-round-large w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> -->
     <!-- Footer end. -->
     </footer>
+    <script>
+        // JavaScript to dynamically add the current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("current-year").textContent = currentYear;
+      </script>
+    
 
  
 </body>
