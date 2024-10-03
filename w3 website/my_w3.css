@@ -2132,7 +2132,7 @@ body, html {
 }
 
 .slide[data-slide="left"] {
-  left: -22%; /* Start hidden from left */
+  left: -12%; /* Start hidden from left */
 }
 
 .slide[data-slide="right"] {
