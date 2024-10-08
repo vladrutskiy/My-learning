@@ -372,6 +372,20 @@ a {
   cursor: pointer;
   white-space: nowrap;
   position: static;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    
+  from{
+      transform: scale(1);
+  }
+
+  to{
+      transform: scale(1.1);
+
+  }
+
 }
 
 .w3-btn:hover {
