@@ -382,7 +382,7 @@ a {
   }
 
   to{
-      transform: scale(1.1);
+      transform: scale(1.05);
 
   }
 
@@ -2190,17 +2190,17 @@ body, html {
  .icons {
   display: inline-flex;
   align-items: center;
-  animation: moveIcons 40s linear infinite; /* Animation for continuous movement */
+  animation: moveIcons 60s linear infinite; /* Animation for continuous movement */
   /* animation-delay: 10ms; */
 }
 
 /* Animation keyframes to move icons */
 @keyframes moveIcons {
   0% {
-    transform: translateX(-100%); /* Start far off-screen to the right */
+    transform: translateX(-50%); /* Start far off-screen to the right */
   }
   100% {
-    transform: translateX(20%); /* Move fully off-screen to the left */
+    transform: translateX(0%); /* Move fully off-screen to the left */
   }
 }
 
@@ -2221,6 +2221,6 @@ body, html {
 .icon-name {
   margin-left: 10px; /* Space between icon and name */
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 22px;
   color: #333;
 }
