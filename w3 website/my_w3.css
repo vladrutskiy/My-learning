@@ -2174,3 +2174,53 @@ body, html {
   top: 0;
 }
 
+/* Container that holds the icons */
+.icon-container {
+  position: relative;
+  white-space: nowrap; /* Prevent icons from wrapping */
+  overflow: hidden; /* Hide overflow to create the animation effect */
+  width: max-content; /* Full width of the viewport */
+  height: 100px; /* Set height for the icon row */
+  background-color: #f0f0f0; /* Light background color */
+  display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+}
+ /* Icons and names container */
+ .icons {
+  display: inline-flex;
+  align-items: center;
+  animation: moveIcons 40s linear infinite; /* Animation for continuous movement */
+  /* animation-delay: 10ms; */
+}
+
+/* Animation keyframes to move icons */
+@keyframes moveIcons {
+  0% {
+    transform: translateX(-100%); /* Start far off-screen to the right */
+  }
+  100% {
+    transform: translateX(20%); /* Move fully off-screen to the left */
+  }
+}
+
+/* Style for individual icon-container pairs */
+.icon-wrapper {
+  display: inline-block;
+  align-items: center;
+  margin:  30px; /* Space between each icon with text */
+}
+
+/* Style for individual icons (images) */
+.icon-wrapper img {
+  width: 80px; /* Set icon size (can be adjusted) */
+  border-radius: 5px;
+}
+
+/* Style for the text (names) next to icons */
+.icon-name {
+  margin-left: 10px; /* Space between icon and name */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
