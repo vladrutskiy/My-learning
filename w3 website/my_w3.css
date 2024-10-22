@@ -2175,41 +2175,51 @@ body, html {
 }
 
 /* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
+/* Container that holds the icons */
 .icon-container {
   position: relative;
-  white-space: nowrap; /* Prevent icons from wrapping */
   overflow: hidden; /* Hide overflow to create the animation effect */
-  width: max-content; /* Full width of the viewport */
+  width: 100%; /* Full width of the viewport */
   height: 100px; /* Set height for the icon row */
   background-color: #f0f0f0; /* Light background color */
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  box-sizing: border-box;  /* Includes padding and border in the element’s total width */
-}
- /* Icons and names container */
- .icons {
-  display: inline-flex;
-  align-items: center;
-  animation: moveIcons 60s linear infinite; /* Animation for continuous movement */
-  /* animation-delay: 10ms; */
+  box-sizing: border-box; /* Includes padding and border in the element’s total width */
 }
 
-/* Animation keyframes to move icons */
+/* Icons and names container */
+.icons {
+  display: inline-flex;
+  align-items: center;
+  animation: moveIcons 30s linear infinite; /* Adjusted duration for smoothness */
+  width: max-content; /* Adjust width dynamically */
+  padding-right: 100%; /* Ensure smooth transition by padding for the next icons set */
+}
+
+/* Animation keyframes for seamless continuous movement */
 @keyframes moveIcons {
   0% {
-    transform: translateX(-50%); 
+    transform: translateX(-21.5%); /* Start at the original position */
   }
   100% {
-    transform: translateX(0%); 
+    transform: translateX(24%); /* Move fully to the left */
   }
 }
 
 /* Style for individual icon-container pairs */
 .icon-wrapper {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
-  margin:  30px; /* Space between each icon with text */
+  margin: 0 30px; /* Space between each icon with text */
 }
 
 /* Style for individual icons (images) */
@@ -2225,3 +2235,24 @@ body, html {
   font-size: 22px;
   color: #333;
 }
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .icon-wrapper {
+    margin: 0 16px; /* Reduce space between icons for smaller screens */
+  }
+
+  .icon-wrapper img {
+    width: 50px; /* Adjust icon size for smaller screens */
+  }
+
+  .icon-name {
+    font-size: 18px; /* Adjust text size for smaller screens */
+  }
+
+  .icons {
+    animation-duration: s; /* Speed up animation on smaller screens for better visibility */
+  }
+}
+
+
