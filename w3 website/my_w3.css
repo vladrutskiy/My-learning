@@ -2183,8 +2183,9 @@ body, html {
   height: 100px; /* Set height for the icon row */
   background-color: #f0f0f0; /* Light background color */
   display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  box-sizing: border-box;  /* Includes padding and border in the element’s total width */
 }
  /* Icons and names container */
  .icons {
@@ -2197,10 +2198,10 @@ body, html {
 /* Animation keyframes to move icons */
 @keyframes moveIcons {
   0% {
-    transform: translateX(-50%); /* Start far off-screen to the right */
+    transform: translateX(-50%); 
   }
   100% {
-    transform: translateX(0%); /* Move fully off-screen to the left */
+    transform: translateX(0%); 
   }
 }
 
